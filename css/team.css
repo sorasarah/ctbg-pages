@@ -1,0 +1,98 @@
+#equipe{
+    height: 100%; 
+}
+#equipe h2{
+    width: 240px;
+    font-size: 2.2rem;
+    display: block;
+    margin: 10px auto; 
+}
+#equipe h2::after{
+    margin: auto 10px;
+}
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    perspective: 1000px;
+    padding: 20px 5px;
+}
+.tcard{
+    position: relative;
+    width: 260px;
+    height: 320px;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    margin: 10px auto;
+}
+.tcard img{
+    height: 100%;
+    width: 100%;   
+}
+.tcard:hover{
+    transform: rotateY(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-front{
+    color: var(--main-white_break-color);
+    background: linear-gradient(rgb(50, 203, 50, 0.8) 0%, lightgreen 65%, rgb(6, 113, 6, 0.8) 100%);
+}
+
+.flip-card-back {
+    color: var(--main-white_break-color);
+    transform: rotateY(180deg);
+    background: linear-gradient(rgb(50, 203, 50, 0.8) 0%, lightgreen 65%, rgb(6, 113, 6, 0.8) 100%);
+    /* background: rgb(117, 131, 89); */
+}
+.statut{
+    display: block;
+    width: 80%;
+    height: 80%;
+    /* border: black solid 3px; */
+    margin: 15% auto;
+    font-size: 1.4rem;
+}
+
+/* image de l'équipe en background */
+/* olivier */
+#flip-card-front_2{
+    background: url(../img/DG\ -card-team.jpeg) no-repeat center /cover;
+}
+/* alicia */
+#flip-card-front_4{
+    background: url(../img/alicia.jpg) no-repeat center /cover;
+}
+/* Damien */
+#flip-card-front_5{
+    background: url(../img/damien.jpg) no-repeat center /cover;
+}
+
+@media screen and (min-width: 481px) and (max-width: 700px){
+    .tcard{
+        position: relative;
+        width: 70%;
+        height: 400px;
+        margin: 10px auto;
+        display: block;
+    }
+    #equipe h2::after{
+        margin: auto 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .tcard{
+        width: 90%;
+        margin: 10px auto;
+        height: 400px;
+    }
+}

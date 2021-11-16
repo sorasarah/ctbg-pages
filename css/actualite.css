@@ -1,0 +1,238 @@
+/* section 1 */
+.actualite {
+  background: url(../img/cubes.svg) no-repeat center / cover;
+  padding: 100px;
+}
+.actualite h1,
+.actualite h2,
+.actualite h3 {
+  text-align: left;
+  margin: 10px 0;
+}
+.actualite h1::after {
+  margin: 0;
+}
+.actualite .titres {
+  background: var(--main-light_grey-color);
+  width: 50%;
+  height: 60%;
+  display: block;
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+/* dernière section autres articles*/
+.autres {
+  height: 100%;
+}
+.autres h2 {
+  width: 350px;
+  display: block;
+  margin: 20px auto;
+  font-size: 2rem;
+}
+.autres .autres_articles{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  background: var(--main-dark_green-color);
+  margin: 20px auto;
+}
+.autres_articles div{
+  height: 200px;
+  width: 30%;
+  margin: 15px auto;
+  border: var(--main-dark_green-color) solid 2px;
+  position: relative;
+}
+.autres_articles .titre-article{
+  background: rgba(225, 225, 225, .5);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.autres_articles h4 {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.5rem;
+  background: white;
+  color: var(--main-dark_green-color);
+}
+.autres_articles a {
+  background: none;
+  font-size: 1.3rem;
+  display: block;
+  margin: 100px 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: none;
+  text-decoration: none;
+}
+.autres_articles a p {
+  color: var(--main-dark_green-color);
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+  padding: 0px 10px;
+  width: 60px;
+}
+.autres_articles a:hover {
+  font-size: 1.5rem;
+}
+/* LES DIFFERENTS ARTICLES */
+.article1{
+  background: url(../img/renovation.jpg) no-repeat center / cover;
+}
+.article2{
+  background: url(../img/renovation.jpg) no-repeat center / cover;
+}
+.article3{
+  background: url(../img/renovation.jpg) no-repeat center / cover;
+}
+.article4{
+  background: url(../img/renovation.jpg) no-repeat center / cover;
+}
+.article5{
+  background: url(../img/renovation.jpg) no-repeat center / cover;
+}
+.article6{
+  background: url(../img/renovation.jpg) no-repeat center / cover;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1124px) {
+  .actualite h1,
+  .actualite h2,
+  .actualite h3 {
+    text-align: left;
+    margin: 20px 0;
+  }
+  .actualite .titres {
+    height: 70%;
+    width: 70%;
+  }
+  .autres .autres_articles{
+    width: 80%;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* section 1 */
+  .actualite {
+    height: 420px;
+    padding: 0px;
+  }
+  .actualite h1,
+  .actualite h2,
+  .actualite h3 {
+    text-align: left;
+    margin: 20px auto;
+    display: block;
+    width: 320px;
+  }
+  .actualite .titres {
+    background: rgba(255, 255, 255, 0.687);
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    font-size: 1rem;
+  }
+  /* dernière section autres articles */
+  .autres {
+    padding: 10px;
+  }
+  .autres h2 {
+    width: 250px;
+    font-size: 1.5rem;
+  }
+  .autres .autres_articles {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .autres_articles div {
+    width: 46%;
+  }
+  .autres_articles h4 {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.2rem;
+  }
+  .autres_articles a {
+    font-size: 1.1rem;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: none;
+    text-decoration: none;
+  }
+  .autres_articles a p {
+    color: var(--main-dark_green-color);
+    text-align: right;
+  }
+  .autres_articles a:hover {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* section 1 */
+  .actualite {
+    height: 320px;
+    padding: 0px;
+  }
+  .actualite h1,
+  .actualite h2,
+  .actualite h3 {
+    text-align: left;
+    margin: 20px auto;
+    display: block;
+    width: 300px;
+  }
+  .actualite .titres {
+    background: rgba(255, 255, 255, 0.687);
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    font-size: 1rem;
+  }
+  /* dernière section */
+  .autres {
+    padding: 10px;
+  }
+  .autres h2 {
+    width: 250px;
+    font-size: 1.5rem;
+  }
+  .autres .autres_articles {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .autres_articles div {
+    width: 46%;
+    height: 150px;
+  }
+  .autres_articles h4 {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.2rem;
+  }
+  .autres_articles a {
+    font-size: 1.1rem;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: none;
+    text-decoration: none;
+  }
+  .autres_articles a p {
+    text-align: left;
+    margin: auto;
+  }
+  .autres_articles a:hover {
+    font-size: 1.2rem;
+  }
+}

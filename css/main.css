@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Nunito Sans', sans-serif;
+    /* background: linear-gradient(to right, rgb(30, 99, 104), rgb(68, 133, 49)); */
+    /* background: rgb(74, 74, 64); */
+}
+
+/* les variables de couleurs */
+:root {
+    --main-lime_green-color: limegreen;
+    --main-black-color: #000000;
+    --main-white-color: #ffffff;
+    --main-light_grey-color: #f6f6f6;
+    --main-white_break-color: #f7f9ff;
+    --main-black-color: #000000;
+    --main-white-color: #ffffff;
+    --main-green-color: #318560;
+    --main-yellow-color: #f7df1e;
+    --main-bleu-color: #137180;
+    --main-bleu_rgba-color: #1371809a;
+    --main-light_grey-color: #f6f6f6;
+    --main-dark_green-color: #026633;
+    --main-bluelight-color: #00ccff;
+    --main-dark_gray-color: #1e2433;
+    --main-white_break-color: #f7f9ff;
+    --main-yellow_rgba-color: rgba(255, 204, 0, 0.8); 
+}
+
+#container{
+    padding-top: 125px;
+}
+
+h1, h2{
+    text-align: center;   
+}
+h1{
+    text-transform: uppercase;
+    width: 300px;
+    display: block;
+    margin:  20px auto;
+}
+
+section{
+    height: 550px;
+}
+h1::after, section h2::after{
+    content: '';
+    display: block;
+    border: var(--main-dark_green-color) solid 2px;
+    width: 50px;
+    height: 0px;
+    position: absolute;
+    align-items: center;
+}
+h1::after{
+    margin: 0 15px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    section h2{
+        font-size: 1.5rem;
+        width: 280px;
+        display: block;
+        margin: 0 auto;
+    }
+}

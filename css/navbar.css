@@ -1,0 +1,279 @@
+/* BANNIERE */
+#pre-header {
+  width: 100%;
+  background: #036633;
+  height: 60px;
+  position: fixed;
+  display: block;
+  z-index: 100;
+}
+
+.el.contact {
+  width: 300px;
+  height: 55px;
+  float: right;
+  color: #fff;
+  display: table;
+  text-align: center;
+}
+
+.block_phone {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.el.contact .prephone {
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.el.contact .phone {
+  display: inline-block;
+}
+
+.el.contact .phone a {
+  font-size: 17px;
+  color: var(--main-white-color);
+  text-decoration: none;
+  box-shadow: 0 0 0 2px;
+  display: block;
+  border-radius: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 25px;
+  line-height: 26px;
+  position: relative;
+  padding: 0 15px 0 45px;
+}
+
+.el.contact .phone a:before {
+  content: "";
+  background: url("../assets/images/svg/phone.svg") no-repeat;
+  width: 38px;
+  height: 25px;
+  margin: 1px 12px;
+  position: absolute;
+  top: 0;
+  border-radius: 50px;
+  left: 0;
+}
+
+.subphone {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+/* NAVBAR */
+
+/*  */
+.navigation {
+  height: 70px;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  z-index: 100;
+  border: #026633 2px solid;
+}
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  background: #ffffff;
+  color: var(--main-black-color);
+  font-weight: 500;
+  text-decoration: none;
+  /*
+    The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+    */
+}
+.brand svg {
+  height: 250px;
+  margin: -90px 0 0 0;
+}
+
+nav ul li a:hover {
+  background: rgba(153, 204, 51, 0.3);
+  color: #003250;
+}
+
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--main-black-color);
+}
+
+nav ul li ul li a:hover{
+  font-weight: 700;
+  transition:.2s;
+}
+
+.nav-dropdown {
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  /* Guarantees that the dropdown will display on top of any content. */
+  box-shadow: 0 3px 12px rgba(128, 188, 0, 0.1);
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .brand svg {
+      height: 175px;
+      margin: -55px 0 0 0;
+  }
+
+  .nav-mobile {
+      display: block;
+  }
+
+  nav {
+      width: 100%;
+      padding: 70px 0 15px;
+  }
+
+  nav ul {
+      display: none;
+  }
+
+  nav ul li {
+      float: none;
+  }
+
+  nav ul li:hover {
+      background: rgb(150, 193, 30);
+  }
+
+  nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+  }
+
+  nav ul li ul li a {
+      padding-left: 30px;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 40px;
+  background: #463f3f;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+  top: -10px;
+  background: #96c11e;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+  background: #026633;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-list {
+      display: block !important;
+  }
+}
+/*
+  .navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+  */
+.navigation {
+  height: 70px;
+  background: #ffffff;
+}
+
+/*
+  .nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+  */
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.brand a,
+.brand a:visited {
+  color: #463f3f;
+  text-decoration: none;
+}

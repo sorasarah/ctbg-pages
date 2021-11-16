@@ -1,0 +1,243 @@
+#parcours {
+  height: 100%;
+  padding: 30px;
+}
+
+#parcours h2 {
+  width: 250px;
+  display: block;
+  margin: 10px auto;
+  font-size: 2rem;
+}
+#parcours h2::after {
+  margin: 0 10px;
+}
+
+.timeline {
+  padding: 10px;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  position: relative;
+  margin: 0px auto;
+}
+
+.timeline-event_type1,
+.timeline-event_type2,
+.timeline-event_type4,
+.timeline-event_type3 {
+  position: relative;
+  display: flex;
+  align-self: center;
+  margin: 20px 0;
+  border-radius: 5px;
+  z-index: -1;
+}
+/* --------------------lines------------------------- */
+/* trait vertical */
+.timeline-event_type1 .timeline-date::before,
+.timeline-event_type3 .timeline-date::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--main-dark_green-color);
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  z-index: -1;
+  transform: translateX(100%);
+  animation: fillTop 3s forwards 1s ease-in-out;
+}
+
+/* trait horizontal */
+.timeline-event_type1 .timeline-date::after,
+.timeline-event_type3 .timeline-date::after {
+  content: "";
+  width: 39%;
+  height: 2px;
+  background: var(--main-dark_green-color);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 0;
+  transform: translateX(100%);
+  animation: fillLeft 3s forwards 1s ease-in-out;
+}
+
+/* trait horizontal */
+.timeline-event_type2 .timeline-date::before,
+.timeline-event_type4 .timeline-date::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background: var(--main-dark_green-color);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 10%;
+  transform: translateX(-100%);
+  animation: fillLeftOdd 3s forwards 1s ease-in-out;
+}
+
+/* trait vertical */
+.timeline-event_type2 .timeline-date::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--main-dark_green-color);
+  position: absolute;
+  bottom: 0;
+  top: -50%;
+  right: 10%;
+  z-index: -1;
+  transform: translateX(100%);
+  animation: fillTop 3s forwards 1s ease-in-out;
+}
+.timeline-description {
+  width: 65%;
+  display: block;
+  margin: auto 0;
+  text-align: justify;
+  background: var(--main-white-color);
+  height: 150px;
+  color: rgb(6, 113, 6);
+  border: solid 2px var(--main-dark_green-color);
+  padding: 20px;
+}
+.timeline-date {
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: auto;
+  background: rgba(91, 223, 64);
+  color: var(--main-white-color);
+}
+.timeline__event__img {
+  width: 150px;
+  display: block;
+  margin: auto 0;
+  height: 150px;
+  background: url(../img/ourson2.jpeg) no-repeat center / cover;
+}
+.timeline-event_type1 .timeline-date div,
+.timeline-event_type3 .timeline-date div {
+  display: block;
+  margin: 20px auto;
+}
+
+.timeline-event_type2 .timeline-date div,
+.timeline-event_type4 .timeline-date div {
+  display: block;
+  margin: 20px auto;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1124px) {
+  .timeline {
+    width: 100%;
+  }
+  /* trait vertical */
+  .timeline-event_type1 .timeline-date::before,
+  .timeline-event_type3 .timeline-date::before {
+    left: 13%;
+  }
+  .timeline-event_type2 .timeline-date::after {
+    right: 13%;
+  }
+  /* trait horizontal */
+  .timeline-event_type1 .timeline-date::after,
+  .timeline-event_type3 .timeline-date::after {
+    transform: translateX(120%);
+  }
+  .timeline-event_type2 .timeline-date::before,
+  .timeline-event_type4 .timeline-date::before {
+    transform: translateX(-110%);
+  }
+
+  .timeline-description {
+    height: 100%;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .timeline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* trait vertical */
+  .timeline-event_type1 .timeline-date::before,
+  .timeline-event_type3 .timeline-date::before {
+    left: 13%;
+  }
+  .timeline-event_type2 .timeline-date::after {
+    right: 13%;
+  }
+
+  /* trait horizontal */
+  /* trait horizontal */
+  .timeline-event_type1 .timeline-date::after,
+  .timeline-event_type3 .timeline-date::after {
+    transform: translateX(120%);
+  }
+  .timeline-event_type2 .timeline-date::before,
+  .timeline-event_type4 .timeline-date::before {
+    transform: translateX(-110%);
+  }
+
+  .timeline-description {
+    height: 100%;
+    width: 50%;
+    padding: 0;
+  }
+  .timeline__event__img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .timeline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #parcours {
+    height: 100%;
+    padding: 15px;
+  }
+  .timeline-description {
+    height: 100%;
+    padding: 10px;
+  }
+  .timeline-event_type1,
+  .timeline-event_type2,
+  .timeline-event_type4,
+  .timeline-event_type3 {
+    height: 100%;
+  }
+  .timeline__event__img {
+    display: none;
+  }
+  .timeline-date {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@keyframes fillLeft {
+  100% {
+    right: 90%;
+  }
+}
+
+@keyframes fillTop {
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes fillLeftOdd {
+  100% {
+    left: 90%;
+  }
+}

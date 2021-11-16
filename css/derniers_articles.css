@@ -1,0 +1,200 @@
+/* section 2 */
+.derniers-articles{
+    position: relative;
+    height: 500px;
+}
+.main-content-cards{
+    position: absolute;
+    border-radius: 20px;
+    top: -15%;
+    left: 15%;
+    width: 70%;
+    box-shadow: 10px 5px 5px 7px var(--main-bleu_rgba-color);
+    background: var( --main-light_grey-color);
+}
+.cards{
+    border: var(--main-bleu_rgba-color) solid 2px;
+    border-radius: 20px;
+    display: block; 
+    margin: 0 auto;
+}
+.cards h2, .info-chantier h2{
+    width: 250px;
+    display: block;
+    margin: 20px auto;
+    font-size: 2rem;
+}
+.blocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: var(--main-lime_green-color);
+    border-radius: 0 0 20px 20px;
+}
+.card h3{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px auto;
+    /* height: 200px; */
+    border: var(--main-yellow-color) solid 2px;
+}
+.card .img{
+    height: 200px;
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+.card #card1{
+    background: url(../img/DG.jpg) no-repeat center / cover;
+}
+.card #card2{
+    background: url(../img/salle-repos.jpg) no-repeat center / cover;
+}
+.card #card3{
+    background: url(../img/admin.jpg) no-repeat center / cover;
+}
+
+.card{
+    height: 470px;
+    padding: 10px;
+    background: var(--main-white-color);
+    color: var(--main-dark_green-color);
+
+}
+.card:nth-child(odd){
+    border-bottom: 2px solid var(--main-yellow-color);
+    border-top: 2px solid var(--main-yellow-color);
+}
+.card:nth-child(even){
+    border: 2px solid var(--main-yellow-color);
+}
+.card:hover{
+    padding: 15px;
+}
+
+.card a{
+    background: none;
+    font-size: 1.3rem;
+    display: block;
+    margin: auto;
+    cursor: pointer; 
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.card a p{
+    color: var(--main-dark_green-color);
+    text-align: right;
+}
+.card a:hover{
+    font-size: 1.5rem;
+}
+.card p{
+    text-align: justify;
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+}
+@media screen and (min-width: 769px) and (max-width: 1124px){
+    
+    .main-content-cards{
+        position: absolute;
+        border-radius: 20px;
+        top: -100px;
+        left: 50px;
+        width: 90%;
+        box-shadow: 10px 5px 5px 7px var(--main-bleu_rgba-color);
+        background: var( --main-light_grey-color);
+    }
+    .card p{
+        width: 100%;
+        margin: 5px auto;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+   
+    .derniers-articles{
+        height: 1400px;
+    }
+    .blocks{
+        flex-direction: column;
+    }
+    .main-content-cards{
+        position: absolute;
+        border-radius: 20px;
+        top: -40px;
+        left: 10%;
+        width: 75%;
+    }
+    .card{
+        height: 450px;
+        padding: 5px;
+        background: var(--main-white-color);
+        color: var(--main-dark_green-color);
+    }
+    .card:hover{
+        padding: 10px;
+        height: 450px;
+        /* transition: 0.3s; */
+    }
+    .card a{
+        background: none;
+        font-size: 1.15rem;
+        display: block;
+        margin: 0;
+    }
+    .card a:hover{
+        font-size: 1.25rem;
+    }
+    .card:nth-child(even){
+        border: none;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .derniers-articles{
+        height: 1500px;
+    }
+    .blocks{
+        flex-direction: column;
+    } 
+    .main-content-cards{
+        left: 0px;
+        top: -20px;
+        width: 100%;
+        box-shadow: none;
+    }
+    /* .card h3{
+        width: 90%;
+        font-size: 1.2rem;
+        padding: 10px;
+    } */
+    .card{
+        height: 460px;
+        padding: 5px;
+        margin: 5px;
+        background: var(--main-white-color);
+        color: var(--main-dark_green-color);
+    }
+    .card:hover{
+        margin: 0px;
+        height: 480px;
+        z-index: 1;
+    }
+    .card p{
+        font-size: 1rem;
+    }
+    .card a{
+        background: none;
+        font-size: 1.15rem;
+        display: block;
+        margin: 0;
+    }
+    .card a:hover{
+        font-size: 1rem;
+    }
+    .card:nth-child(even){
+        border: none;
+    }
+}
